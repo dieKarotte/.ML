@@ -304,7 +304,7 @@ ML-PROBABILITY
 
     heaviside step function&emsp;单位阶跃函数
 
-    log odds&emsp;对数发生比&ensp;$\frac{p}{1-p}$
+    log odds&emsp;对数发生比&ensp; $p\over 1-p$
 
     The logistic function or sigmoid function maps the log-odds a to p
 
@@ -376,13 +376,13 @@ ML-PROBABILITY
 
     beta function: $B(a, b) = {Γ(a)Γ(b)\overΓ(a+b)}$
 
-    Gamma function: &Gamma;(a) = $\int_0^\infty$$x^{a−1}$$e^{-x}dx$
+    Gamma function: $\Gamma(a) = \int_0^\infty x^{a−1}e^{-x}dx$
 
     Gamma distribution, shape a > 0 and the rate b > 0
 
     special case of gamma: 
 
-    - Exponential distribution (shape = a = 1,rate = b = λ)
+    - Exponential distribution (shape = a = 1, rate = b = λ)
     - Chi-squared distribution
     - The inverse Gamma distribution
     
@@ -400,12 +400,12 @@ ML-PROBABILITY
 
     derive the mean and covariance:
 
-    $\mathbb{E}$ [__y__] = $\mathbb{E}$ [__Ax__ + __b__] = __Aµ__ + __b__
-    where µ = $\mathbb{E}$ [__x__]
+    $\mathbb{E} [\pmb{y}] = \mathbb{E} [\pmb{Ax} + \pmb{b}] = \pmb{A}\mu + \pmb{b}$
+    where $\mu = \mathbb{E} [\pmb{x}]$
 
     if $f(x) = \pmb{a^{T}x} + {b}$
 
-    $\mathbb{E}$ [$\pmb{a^{T}x} + {b}$] = $\pmb{a^{T}}$__µ__ + b
+    $\mathbb{E} [ \pmb{a^{T}x} + {b}] = \pmb{a^{T}\mu} + b $
 
     $Cov[\pmb{y}] = Cov[\pmb{Ax} + \pmb{b}] = \pmb{A \varSigma A^{T}}$
 
@@ -421,7 +421,7 @@ ML-PROBABILITY
 
     convolution theorem&emsp;卷积定理
 
-    $p(y) = [{{d}\over{dy^{*}}}  P_y(y^{*})]_{y^{*} = y} = \int p_1(x_1)p_2(y - x_1)dx_1$ 
+    $p(y) = [{{d}\over{dy^{\*}}}  P_y(y^{\*})]_{y^{\*} = y} = \int p_1(x_1)p_2(y - x_1)dx_1$ 
 
     also written as $p = p_1 \circledast p_2$
 
@@ -463,13 +463,13 @@ ML-PROBABILITY
 
     correlation matrix&emsp;协方差矩阵
 
-    $corr(\pmb{x}) = (diag(\pmb{K}_{xx}))^{-\frac1 2} \pmb{K}_{xx} (diag(\pmb{K}_{xx}))^{-\frac1 2}$
+    $corr(\pmb{x}) = (diag(\pmb{K}\_{xx}))^{-\frac1 2} \pmb{K}\_{xx} (diag(\pmb{K}\_{xx}))^{-\frac1 2}$
 
     对角元素已经归一化
 
     $\pmb{K}_{xx}$ is the auto-covariance matrix&emsp;自协方差矩阵
 
-    $ \pmb{K}_{xx} = \varSigma = \mathbb{E}[(\pmb{x} - \mathbb{E}[\pmb{x}])(\pmb{x} - \mathbb{E}[\pmb{x}])^{\pmb{T}}] = \pmb{R}_{xx} - \mu \mu^{T} $
+    $\pmb{K}\_{xx} = \varSigma = \mathbb{E}[(\pmb{x} - \mathbb{E}[\pmb{x}])(\pmb{x} - \mathbb{E}[\pmb{x}])^{\pmb{T}}] = \pmb{R}\_{xx} - \mu \mu^{T}$
 
     $\pmb{R}_{xx} = \mathbb{E}[xx^{T}]$ is the autocorrelation matrix&emsp;自相关矩阵
 
